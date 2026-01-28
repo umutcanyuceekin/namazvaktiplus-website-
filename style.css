@@ -155,60 +155,48 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 12px 24px;
-    border-radius: 8px;
+    padding: 14px 28px;
+    border-radius: 12px;
     text-decoration: none;
     font-weight: 600;
-    transition: all 0.3s ease;
-    gap: 10px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    gap: 12px;
 }
 
 .btn-primary {
     background-color: var(--accent-gold);
     color: var(--text-dark);
     border: 2px solid var(--accent-gold);
+    box-shadow: 0 10px 20px rgba(196, 154, 78, 0.2);
 }
 
 .btn-primary:hover {
     background-color: transparent;
     color: var(--accent-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(196, 154, 78, 0.3);
 }
 
 .btn-secondary {
-    background-color: transparent;
-    color: var(--accent-gold);
-    border: 2px solid var(--accent-gold);
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-cream);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
 }
 
 .btn-secondary:hover {
-    background-color: var(--accent-gold);
-    color: var(--text-dark);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+    transform: translateY(-2px);
 }
+
 
 .store-icon {
-    width: 20px;
-    height: 20px;
-    background-color: currentColor;
-    mask-size: contain;
-    mask-repeat: no-repeat;
-    mask-position: center;
-    -webkit-mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center;
+    width: 24px;
+    height: 24px;
 }
 
-/* Placeholder masks for icons - normally you'd use SVGs or FontAwesome */
-.android-icon {
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 20.5v-17c0-.83.67-1.5 1.5-1.5h15c.83 0 1.5.67 1.5 1.5v17c0 .83-.67 1.5-1.5 1.5h-15c-.83 0-1.5-.67-1.5-1.5zm6.5-14h-2v2h2v-2zm5 0h-2v2h2v-2zm-5 4h-2v2h2v-2zm5 0h-2v2h2v-2zm-5 4h-2v2h2v-2zm5 0h-2v2h2v-2z"/></svg>');
-    mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 20.5v-17c0-.83.67-1.5 1.5-1.5h15c.83 0 1.5.67 1.5 1.5v17c0 .83-.67 1.5-1.5 1.5h-15c-.83 0-1.5-.67-1.5-1.5zm6.5-14h-2v2h2v-2zm5 0h-2v2h2v-2zm-5 4h-2v2h2v-2zm5 0h-2v2h2v-2zm-5 4h-2v2h2v-2zm5 0h-2v2h2v-2z"/></svg>');
-    /* Placeholder shape */
-}
-
-
-.ios-icon {
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>');
-    /* Placeholder shape */
-}
 
 
 .hero-image {
