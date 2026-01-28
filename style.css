@@ -1,0 +1,412 @@
+/* Global Reset & Base Styles */
+:root {
+    --bg-dark-start: #004D55;
+    /* Deep Teal */
+    --bg-dark-end: #001a2c;
+    /* Midnight Blue */
+    --bg-light: #F9F9F9;
+    /* Very Light Cream */
+    --accent-gold: #C49A4E;
+    /* Gold */
+    --text-cream: #FBEFCE;
+    /* Cream */
+    --text-dark: #001a2c;
+    /* Dark Blue */
+    --white: #FFFFFF;
+
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* SECTION 1: The Hero (Header) area */
+.hero-section {
+    background: linear-gradient(135deg, var(--bg-dark-start), var(--bg-dark-end));
+    color: var(--text-cream);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar {
+    padding: 20px 0;
+}
+
+.logo-container {
+    width: 60px;
+    height: 60px;
+}
+
+.app-logo {
+    width: 100%;
+    height: auto;
+}
+
+.logo-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--accent-gold);
+    border: 1px solid var(--accent-gold);
+}
+
+.hero-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+    padding: 40px 0;
+    gap: 40px;
+}
+
+@media (min-width: 992px) {
+    .hero-content {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+    }
+
+    .hero-text {
+        max-width: 50%;
+        align-items: flex-start;
+    }
+
+    .hero-image {
+        max-width: 45%;
+    }
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 2;
+}
+
+.headline {
+    font-family: var(--font-secondary);
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-cream);
+}
+
+.brand-name {
+    color: var(--accent-gold);
+    display: block;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 600px;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+@media (min-width: 992px) {
+    .cta-buttons {
+        justify-content: flex-start;
+    }
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    gap: 10px;
+}
+
+.btn-primary {
+    background-color: var(--accent-gold);
+    color: var(--text-dark);
+    border: 2px solid var(--accent-gold);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--accent-gold);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--accent-gold);
+    border: 2px solid var(--accent-gold);
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-gold);
+    color: var(--text-dark);
+}
+
+.store-icon {
+    width: 20px;
+    height: 20px;
+    background-color: currentColor;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+}
+
+/* Placeholder masks for icons - normally you'd use SVGs or FontAwesome */
+.android-icon {
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 20.5v-17c0-.83.67-1.5 1.5-1.5h15c.83 0 1.5.67 1.5 1.5v17c0 .83-.67 1.5-1.5 1.5h-15c-.83 0-1.5-.67-1.5-1.5zm6.5-14h-2v2h2v-2zm5 0h-2v2h2v-2zm-5 4h-2v2h2v-2zm5 0h-2v2h2v-2zm-5 4h-2v2h2v-2zm5 0h-2v2h2v-2z"/></svg>');
+    mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 20.5v-17c0-.83.67-1.5 1.5-1.5h15c.83 0 1.5.67 1.5 1.5v17c0 .83-.67 1.5-1.5 1.5h-15c-.83 0-1.5-.67-1.5-1.5zm6.5-14h-2v2h2v-2zm5 0h-2v2h2v-2zm-5 4h-2v2h2v-2zm5 0h-2v2h2v-2zm-5 4h-2v2h2v-2zm5 0h-2v2h2v-2z"/></svg>');
+    /* Placeholder shape */
+}
+
+
+.ios-icon {
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>');
+    /* Placeholder shape */
+}
+
+
+.hero-image {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.phone-frame {
+    width: 280px;
+    height: 560px;
+    background-color: #1a1a1a;
+    border-radius: 36px;
+    border: 8px solid #333;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.screen-content {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #004D55, #001a2c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glowing-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-gold);
+    box-shadow: 0 0 30px rgba(196, 154, 78, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-cream);
+}
+
+.time-remaining {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.next-prayer {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+/* SECTION 2: Key Features (The "Why Us") */
+.features-section {
+    background-color: var(--bg-light);
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    font-family: var(--font-secondary);
+    color: var(--text-dark);
+}
+
+.brand-name-inline {
+    color: var(--accent-gold);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+.feature-card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-title {
+    color: var(--text-dark);
+    font-family: var(--font-secondary);
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.feature-desc {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* SECTION 2.5: Daily Inspiration */
+.inspiration-section {
+    background: linear-gradient(135deg, var(--bg-dark-start), var(--bg-dark-end));
+    padding: 60px 0;
+    color: var(--text-cream);
+}
+
+.inspiration-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(196, 154, 78, 0.2);
+    padding: 40px;
+    border-radius: 24px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.inspiration-label {
+    display: block;
+    color: var(--accent-gold);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.inspiration-text {
+    font-size: 1.5rem;
+    font-family: var(--font-secondary);
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.inspiration-source {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* SECTION 3: The Footer (Trust & Legal) */
+.footer-section {
+    background-color: #00121d;
+    color: rgba(255, 255, 255, 0.4);
+    padding: 40px 0;
+    font-size: 0.85rem;
+}
+
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--accent-gold);
+}
